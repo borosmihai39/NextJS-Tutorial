@@ -43,9 +43,6 @@ export const createTaskCustom = async (prevState, formData) => {
 };
 
 export const deleteTask = async (formData) => {
-  await new Promise((resolve) => {
-    setTimeout(resolve, 2000);
-  });
   const id = formData.get("id");
   await prisma.task.delete({
     where: {
